@@ -1,0 +1,10 @@
+(define num-tassellaz-c
+  (lambda (n)
+    (cond((= n 1) 1)
+         ((= n 2) 2)
+         ((= n 3) 3)
+         (else
+          (+(num-tassellaz-c(- n 1))
+            (num-tassellaz-c(- n 2))
+            (num-tassellaz-c(- n 3))
+            )))))
